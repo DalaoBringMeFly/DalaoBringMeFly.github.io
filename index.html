@@ -377,6 +377,126 @@ $ npm run dev
 
 <p>此时，前后端都已经跑了起来。</p>
 
+<h2 id="toc_12">设计分享</h2>
+
+<h3 id="toc_13">后端 API 设计</h3>
+
+<p><u>基于 <strong>Go</strong>、<strong>boltdb</strong>、<strong>graphql</strong></u></p>
+
+<p><strong>film</strong> 👇</p>
+
+<pre><code class="language-go">type Film struct {
+    Producer      string `json:&quot;producer&quot;`
+    Title         string `json:&quot;title&quot;`
+    EpisodeID     int    `json:&quot;episode_id&quot;`
+    OpeningCrawl  string `json:&quot;opening_crawl&quot;`
+    Director      string `json:&quot;director&quot;`
+    CharacterURLs []int  `json:&quot;characters&quot;`
+    PlanetURLs    []int  `json:&quot;planets&quot;`
+    StarshipURLs  []int  `json:&quot;starships&quot;`
+    VehicleURLs   []int  `json:&quot;vehicles&quot;`
+    SpeciesURLs   []int  `json:&quot;species&quot;`
+    Created       string `json:&quot;created&quot;`
+    Edited        string `json:&quot;edited&quot;`
+    ReleaseData   string `json:&quot;release_date&quot;`
+}
+</code></pre>
+
+<p><strong>person</strong> 👇</p>
+
+<pre><code class="language-go">type Person struct {
+    Name      string `json:&quot;name&quot;`
+    Height    string `json:&quot;height&quot;`
+    Mass      string `json:&quot;mass&quot;`
+    HairColor string `json:&quot;hair_color&quot;`
+    SkinColor string `json:&quot;skin_color&quot;`
+    EyeColor  string `json:&quot;eye_color&quot;`
+    BirthYear string `json:&quot;birth_year&quot;`
+    Gender    string `json:&quot;gender&quot;`
+    Homeworld int    `json:&quot;homeworld&quot;`
+    Created   string `json:&quot;created&quot;`
+    Edited    string `json:&quot;edited&quot;`
+}
+</code></pre>
+
+<p><strong>planet</strong> 👇</p>
+
+<pre><code class="language-go">type Planet struct {
+    Name           string `json:&quot;name&quot;`
+    RotationPeriod string `json:&quot;rotation_period&quot;`
+    OrbitalPeriod  string `json:&quot;orbital_period&quot;`
+    Diameter       string `json:&quot;diameter&quot;`
+    Climate        string `json:&quot;climate&quot;`
+    Gravity        string `json:&quot;gravity&quot;`
+    Terrain        string `json:&quot;terrain&quot;`
+    SurfaceWater   string `json:&quot;surface_water&quot;`
+    Population     string `json:&quot;population&quot;`
+    Created        string `json:&quot;created&quot;`
+    Edited         string `json:&quot;edited&quot;`
+}
+</code></pre>
+
+<p><strong>species</strong> 👇</p>
+
+<pre><code class="language-go">type Species struct {
+    Name            string `json:&quot;name&quot;`
+    Classification  string `json:&quot;classification&quot;`
+    Designation     string `json:&quot;designation&quot;`
+    AverageHeight   string `json:&quot;average_height&quot;`
+    SkinColors      string `json:&quot;skin_colors&quot;`
+    HairColors      string `json:&quot;hair_colors&quot;`
+    EyeColors       string `json:&quot;eye_colors&quot;`
+    AverageLifespan string `json:&quot;average_lifespan&quot;`
+    Homeworld       int    `json:&quot;homeworld&quot;`
+    Language        string `json:&quot;language&quot;`
+    PeopleURLs      []int  `json:&quot;people&quot;`
+    Created         string `json:&quot;created&quot;`
+    Edited          string `json:&quot;edited&quot;`
+}
+</code></pre>
+
+<p><strong>starship</strong> 👇</p>
+
+<pre><code class="language-go">type Starship struct {
+    HyperdriveRating string `json:&quot;hyperdrive_rating&quot;`
+    MGLT             string `json:&quot;MGLT&quot;`
+    StarshipClass    string `json:&quot;starship_class&quot;`
+    PilotURLs        []int  `json:&quot;pilots&quot;`
+}
+</code></pre>
+
+<p><strong>vehicle</strong> 👇</p>
+
+<pre><code class="language-go">type Vehicle struct {
+    VehicleClass string `json:&quot;vehicle_class&quot;`
+    PilotURLs    []int  `json:&quot;pilots&quot;`
+}
+</code></pre>
+
+<p>你可以遵循着 GraphQL 的风格来请求所需要的信息。</p>
+
+<p>例如：</p>
+
+<pre><code class="language-shell">$ curl -g &#39;http://localhost:5656/graphql?query={film(id:1){title}}&#39;
+{&quot;data&quot;:{&quot;film&quot;:{&quot;title&quot;:&quot;Return of the Jedi&quot;}}}
+</code></pre>
+
+<h3 id="toc_14">前端 Web 设计</h3>
+
+<p><u>基于 <strong>Vue</strong>、<strong>Babel</strong>、<strong>eslint</strong></u></p>
+
+<p><strong>查询页面</strong></p>
+
+<p><img src="media/15449501628455/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-16%20%E4%B8%8B%E5%8D%887.45.35.png" alt="屏幕快照 2018-12-16 下午7.45.35"/>￼</p>
+
+<p><strong>关于页面</strong></p>
+
+<p><img src="media/15449501628455/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-16%20%E4%B8%8B%E5%8D%887.46.55.png" alt="屏幕快照 2018-12-16 下午7.46.55"/>￼</p>
+
+<p><strong>介绍页面</strong></p>
+
+<p><img src="media/15449501628455/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-16%20%E4%B8%8B%E5%8D%887.48.11.png" alt="屏幕快照 2018-12-16 下午7.48.11"/>￼</p>
+
 </div></body>
 
 </html>
