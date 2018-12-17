@@ -1,5 +1,17 @@
 # 「大佬带我飞」项目文档
 
+## 项目分工
+
+| Key | Value | Part |
+| :---: | :---: | :---: |
+| [![Zophyr](https://avatars2.githubusercontent.com/u/23242688?s=64&v=4)](https://github.com/Zophyr) | Zophyr | ![icon](https://img.icons8.com/color/64/000000/overview-pages-2.png) ![icon](https://img.icons8.com/color/64/000000/object.png) ![icon](https://img.icons8.com/color/64/000000/medium-logo.png)|
+| [![hongzicong](https://avatars0.githubusercontent.com/u/25472288?s=64&v=4)](https://github.com/hongzicong) | hongzicong | ![icon](https://img.icons8.com/color/64/000000/golang.png) ![icon](https://img.icons8.com/color/64/000000/server.png) <img src="https://graphql.cn/img/logo.svg" width="64" /> |
+| [![HzYoung](https://avatars0.githubusercontent.com/u/28604166?s=64&v=4)](https://github.com/HzYoung) | HzYoung | ![icon](https://img.icons8.com/color/64/000000/golang.png) ![icon](https://img.icons8.com/color/64/000000/server.png) <img src="https://graphql.cn/img/logo.svg" width="64" /> |
+| [![huangjundashuaige](https://avatars0.githubusercontent.com/u/25540438?s=64&v=4)](https://github.com/huangjundashuaige) | huangjundashuaige | ![icon](https://img.icons8.com/color/64/000000/golang.png) ![icon](https://img.icons8.com/color/64/000000/hashtag-activity-grid.png)  ![icon](https://img.icons8.com/color/64/000000/debian.png)|
+| [![EmilyBlues](https://avatars2.githubusercontent.com/u/23052788?s=64&v=4)](https://github.com/EmilyBlues) | EmilyBlues | <img src="https://cn.vuejs.org/images/logo.png" width="64" /> ![icon](https://img.icons8.com/color/64/000000/web.png) ![icon](https://img.icons8.com/color/64/000000/show-property.png)|
+| [![CurryYuan](https://avatars3.githubusercontent.com/u/25635874?s=64&v=4)](https://github.com/CurryYuan) | CurryYuan | <img src="https://cn.vuejs.org/images/logo.png" width="64" /> ![icon](https://img.icons8.com/color/64/000000/content.png) ![icon](https://img.icons8.com/color/64/000000/data-sheet.png)|
+| [![yezo13](https://avatars0.githubusercontent.com/u/30917246?s=64&v=4)](https://github.com/yezo13) | yezo13 | <img src="https://cn.vuejs.org/images/logo.png" width="64" /> ![icon](https://img.icons8.com/color/64/000000/media-queries.png) ![icon](https://img.icons8.com/color/64/000000/code.png) |
+
 ## 前情提要
 
 这是我们小组简单 web 服务与客户端开发实战。
