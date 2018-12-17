@@ -2,7 +2,7 @@
 
 ## 项目分工
 
-<p align = "center">
+<div align = "center">
 
 | Key | Value | Part |
 | :---: | :---: | :---: |
@@ -14,7 +14,7 @@
 | [![CurryYuan](https://avatars3.githubusercontent.com/u/25635874?s=64&v=4)](https://github.com/CurryYuan) | CurryYuan | <img src="https://cn.vuejs.org/images/logo.png" width="64" /> ![icon](https://img.icons8.com/color/64/000000/content.png) ![icon](https://img.icons8.com/color/64/000000/data-sheet.png)|
 | [![yezo13](https://avatars0.githubusercontent.com/u/30917246?s=64&v=4)](https://github.com/yezo13) | yezo13 | <img src="https://cn.vuejs.org/images/logo.png" width="64" /> ![icon](https://img.icons8.com/color/64/000000/media-queries.png) ![icon](https://img.icons8.com/color/64/000000/code.png) |
 
-</p>
+</div>
 
 ## 前情提要
 
